@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res){
-    res.sendFile('index.html', {root: __dirname + ""
+    res.sendFile('index.html', {root: __dirname + "/webPages"
     });
 });
 

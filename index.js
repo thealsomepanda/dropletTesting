@@ -2,8 +2,9 @@ var express = require('express');
 var app = express();
 
 app.get('/', function (req, res){
-    res.send('/index.html')
-})
+    res.sendFile('index.html', {root: __dropletTesting + "/index.html"
+    });
+});
 
 app.listen(3000);
 

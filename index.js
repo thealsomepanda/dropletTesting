@@ -13,7 +13,7 @@ app.get('/', function (req, res){
 });
 
 app.get('/formPage', function (req, res){
-    res.sendFile('formPage.html', {root: __dirname +"/webpages"
+    res.sendFile('formPage.html', {root: __dirname +"/webPages"
     });
 });
 

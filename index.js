@@ -28,4 +28,5 @@ console.log("server is running on port 3000...");
 app.post('/formPage', function (req, res) {
     var name = req.query.name_field;
     res.send(name);
+    console.log(name);
 })

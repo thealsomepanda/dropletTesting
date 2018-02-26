@@ -2,7 +2,8 @@
 // dependencies
 const express = require('express');
 const bodyParser = require('body-parser');
-const validator = require('express-validator');
+const { body,validationResult } = require('express-validator/check');
+const { sanitizeBody } = require('express-validator/filter');
 
 const app = express();
 
@@ -25,5 +26,6 @@ console.log("server is running on port 3000...");
 
 // this handles the form on formPage.html
 app.post('/formPage', function (req, res) {
-    res.send('You sent the name "' + res.body.name_field + '".');
-});
+    var name = req.query.name_field;
+    res.send(name);
+})

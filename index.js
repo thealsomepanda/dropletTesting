@@ -29,4 +29,4 @@ app.post('/formPage', function (req, res) {
     var name = req.query.nameField;
     res.send(name);
     console.log(name);
-})
+});
